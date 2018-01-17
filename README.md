@@ -2,6 +2,9 @@
 
 1. [Naive Bayes Algorithm for Spam Detection (tutorial)][1]
 2. [Introduction to Decision Trees using the Titanic Survival Data][2]
+3. [Model Evaluation and Validation using Boston Housing Prices][3]
+    * Decision trees, performance metrics, learning and complexity curves, bias-variance tradeoff, grid search, cross validation
 
 [1]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/naive_bayes_spam.ipynb
 [2]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/titanic_survival_exploration/titanic_survival_exploration.ipynb
+[3]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/boston_housing/boston_housing.ipynb
