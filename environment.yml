@@ -6,4 +6,6 @@ dependencies:
     - matplotlib
     - scikit-learn
     - jupyterlab
-    - tensorflow==1.4
+    - pip:
+        - tensorflow==1.4
+        - keras
