@@ -5,7 +5,7 @@ dependencies:
     - numpy
     - matplotlib
     - scikit-learn
-    - jupyterlab
     - pip:
-        - tensorflow==1.4
+        - jupyterlab
+        - tensorflow-gpu==1.4
         - keras
