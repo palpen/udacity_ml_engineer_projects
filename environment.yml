@@ -1,0 +1,9 @@
+name: udacity_ml
+dependencies:
+    - python=3.5
+    - pandas
+    - numpy
+    - matplotlib
+    - scikit-learn
+    - jupyterlab
+    - tensorflow==1.4
