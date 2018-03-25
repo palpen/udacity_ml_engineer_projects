@@ -4,6 +4,9 @@
 [image2]: ./images/vgg16_model.png "VGG-16 Model Keras Layers"
 [image3]: ./images/vgg16_model_draw.png "VGG16 Model Figure"
 
+## Setup Specific to my Computer
+* `data` folder is is a symbolic link to an external hard drive, run `udisksctl mount -b /dev/sdb1` to mount hard drive
+
 
 ## Project Overview
 
