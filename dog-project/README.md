@@ -6,7 +6,7 @@
 
 ## Setup Specific to my Computer
 * `data` folder is is a symbolic link to an external hard drive, run `udisksctl mount -b /dev/sdb1` to mount hard drive
-
+* Symbolic link to dataset: `ln -s /media/pspenano/2TB\ HDD/ml_data/udacity_dog_breed_prj_data ~/Dropbox/data_science/udacity_ml_engineer/udacity_ml_engineer_projects/dog-project/data`
 
 ## Project Overview
 
