@@ -14,7 +14,14 @@
     * Tuned model hyperparameters using grid search with 3-fold cross validation
     * Accounted for unbalanced classification in performance metric (with emphasis on precision)
 
+5. [Unsupervised Learning for Customer Segmentation][5]
+    * Used principal component analysis to reduce the dimension of the data to two dimensions while retaining about 73% of the explained variation (two dimensions was chosen for easier visualization)
+    * Used the Gaussian mixture model (GMM) clustering algorithm to identify market segments using the two-dimensional dataset reduced using PCA. GMM allows for soft-clustering and more flexible cluster shape compared with K-means
+    * Computed the Silhouette coefficient to determine optimal number of clusters
+    * General data preprocessing (to deal with skewed features and outliers) and visualization
+
 [1]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/naive_bayes_spam.ipynb
 [2]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/titanic_survival_exploration/titanic_survival_exploration.ipynb
 [3]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/boston_housing/boston_housing.ipynb
 [4]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/finding_donors/finding_donors.ipynb
+[5]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/customer_segments/customer_segments.ipynb
