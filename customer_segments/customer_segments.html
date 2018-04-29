@@ -15171,7 +15171,7 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -15474,23 +15474,24 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">r2_score</span>
 
-<span class="n">predict_col</span> <span class="o">=</span> <span class="s1">&#39;Grocery&#39;</span>
+<span class="n">predict_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fresh&#39;</span><span class="p">,</span> <span class="s1">&#39;Milk&#39;</span><span class="p">,</span> <span class="s1">&#39;Grocery&#39;</span><span class="p">,</span> <span class="s1">&#39;Frozen&#39;</span><span class="p">,</span> <span class="s1">&#39;Detergents_Paper&#39;</span><span class="p">,</span> <span class="s1">&#39;Delicatessen&#39;</span><span class="p">]</span>
 
-<span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
-<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">predict_col</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">predict_col</span> <span class="ow">in</span> <span class="n">predict_cols</span><span class="p">:</span>
 
-<span class="c1"># TODO: Split the data into training and testing sets(0.25) using the given feature as the target</span>
-<span class="c1"># Set a random state.</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">predict_col</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
+    <span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">predict_col</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># TODO: Create a decision tree regressor and fit it to the training set</span>
-<span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1"># TODO: Split the data into training and testing sets(0.25) using the given feature as the target</span>
+    <span class="c1"># Set a random state.</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">predict_col</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-<span class="c1"># TODO: Report the score of the prediction using the testing set</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">predict_col</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+    <span class="c1"># TODO: Create a decision tree regressor and fit it to the training set</span>
+    <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="c1"># TODO: Report the score of the prediction using the testing set</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">predict_col</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15505,7 +15506,12 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Grocery 0.681884008544
+<pre>Fresh -0.385749710204
+Milk 0.156275395017
+Grocery 0.681884008544
+Frozen -0.210135890125
+Detergents_Paper 0.271666980627
+Delicatessen -2.2547115372
 </pre>
 </div>
 </div>
@@ -15545,6 +15551,7 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I attempted to predict Grocery. The r2 score for this is 0.682. This means that Grocery spending can be predicted by the other features, but not perfectly. Given that the r2 score is less than one, it may still be helpful to use the Grocery feature in the analysis. Also, the dataset isn't very large so there's very little performance gain from excluding the Grocery column.</p>
+<p>Other features that have a positive R2 score are Detergents_Paper (0.272) and Milk (0.156). The rest of the features have a negative R2 score, which means the model estimated does worse than the mean of the output.</p>
 
 </div>
 </div>
@@ -17387,12 +17394,125 @@ DMMwDMMwjCny/wF2eAYjCf/r7QAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fresh</th>
+      <td>1.000000</td>
+      <td>0.100510</td>
+      <td>-0.011854</td>
+      <td>0.345881</td>
+      <td>-0.101953</td>
+      <td>0.244690</td>
+    </tr>
+    <tr>
+      <th>Milk</th>
+      <td>0.100510</td>
+      <td>1.000000</td>
+      <td>0.728335</td>
+      <td>0.123994</td>
+      <td>0.661816</td>
+      <td>0.406368</td>
+    </tr>
+    <tr>
+      <th>Grocery</th>
+      <td>-0.011854</td>
+      <td>0.728335</td>
+      <td>1.000000</td>
+      <td>-0.040193</td>
+      <td>0.924641</td>
+      <td>0.205497</td>
+    </tr>
+    <tr>
+      <th>Frozen</th>
+      <td>0.345881</td>
+      <td>0.123994</td>
+      <td>-0.040193</td>
+      <td>1.000000</td>
+      <td>-0.131525</td>
+      <td>0.390947</td>
+    </tr>
+    <tr>
+      <th>Detergents_Paper</th>
+      <td>-0.101953</td>
+      <td>0.661816</td>
+      <td>0.924641</td>
+      <td>-0.131525</td>
+      <td>1.000000</td>
+      <td>0.069291</td>
+    </tr>
+    <tr>
+      <th>Delicatessen</th>
+      <td>0.244690</td>
+      <td>0.406368</td>
+      <td>0.205497</td>
+      <td>0.390947</td>
+      <td>0.069291</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Each feature appears to be heavily skewed to the right. This indicates that most values across the six features are small with many outliers compared to data that is normally distributed. The features that appear to be highly correlated are Milk and Grocery, Detergents_Papers and Grocery, and Milk and Detergents_Paper. This confirms my findings in Question 2 in that we can predict the Grocery feature from the other features, namely Milk and Detergents_Paper</p>
+<p><strong>Answer:</strong> Each feature appears to be heavily skewed to the right. This indicates that most values across the six features are small with many outliers compared to data that is normally distributed. The features that appear to be highly correlated are Milk and Grocery (0.728), Detergents_Papers and Grocery (0.925), and Milk and Detergents_Paper (0.662). This confirms my findings in Question 2 in that we can predict the Grocery feature from the other features, namely Milk and Detergents_Paper</p>
 
 </div>
 </div>
@@ -17424,7 +17544,7 @@ DMMwDMMwjCny/wF2eAYjCf/r7QAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -21540,7 +21660,7 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -21646,7 +21766,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -21674,6 +21794,7 @@ Once you have performed this implementation, the dataset will be stored in the v
     
 <span class="c1"># OPTIONAL: Select the indices for data points you wish to remove</span>
 <span class="n">outliers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">outliers_index</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Index of outliers to remove:&quot;</span><span class="p">,</span> <span class="n">outliers</span><span class="p">)</span>
 
 <span class="c1"># Remove the outliers, if any were specified</span>
 <span class="c1"># print(len(log_data))</span>
@@ -21705,6 +21826,7 @@ Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
 [38, 57, 65, 65, 66, 75, 75, 81, 86, 95, 96, 98, 128, 145, 154, 154, 161, 171, 175, 193, 218, 264, 304, 305, 325, 338, 353, 355, 356, 357, 412, 420, 429, 439]
 Data points considered outliers for the feature &#39;Delicatessen&#39;:
 [38, 57, 65, 65, 66, 66, 75, 75, 81, 86, 95, 96, 98, 109, 128, 128, 137, 142, 145, 154, 154, 154, 161, 171, 175, 183, 184, 187, 193, 203, 218, 233, 264, 285, 289, 304, 305, 325, 338, 343, 353, 355, 356, 357, 412, 420, 429, 439]
+Index of outliers to remove: [128, 264, 137, 142, 145, 154, 412, 285, 161, 289, 420, 38, 171, 429, 175, 304, 305, 183, 184, 57, 439, 187, 65, 66, 193, 325, 75, 203, 81, 338, 86, 343, 218, 95, 96, 353, 98, 355, 356, 357, 233, 109]
 </pre>
 </div>
 </div>
