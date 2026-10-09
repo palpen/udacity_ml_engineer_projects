@@ -1,0 +1,74 @@
+Scope of this license
+
+The MIT terms below apply only to Palermo Penano's original contributions
+identified here. Notebook cell numbers are one-based positions at repository
+commit fb0e17e8929f5801582edca780ac27940af7ca9e; they identify locations,
+not a license for each complete cell.
+
+Covered contributions:
+- README.md: Palermo's project summaries.
+- boston_housing/boston_housing.ipynb: student-written answer text in cells
+  10, 18, 22, 27, 31, 33, 36, 38, 44, 47, 51; original implementation additions
+  in cells 2, 8, 11, 14, 20, 40.
+- customer_segments/customer_segments.ipynb: student-written answer text in
+  cells 12, 16, 21, 30, 35, 47, 51, 58, 61, 65, 67, 71; original implementation
+  additions in cells 5, 9, 10, 14, 20, 24, 28, 33, 39, 49, 53, 55, 56.
+- finding_donors/finding_donors.ipynb: student-written answer and analysis
+  text in cells 27, 32, 35, 37, 43, 46, 61, 65; original implementation
+  additions in cells 4, 8, 18, 24, 29, 31, 39, 40, 47-55, 57-59.
+- titanic_survival_exploration/titanic_survival_exploration.ipynb:
+  student-written answer text in cells 13, 20, 27, 36, 38; original
+  implementation additions in cells 2, 17, 24, 29, 30, 31, 33.
+- naive_bayes_spam.ipynb: Palermo's original introduction in cell 1 and
+  independently authored code additions in cells 2, 4, 5, 9, 11, 15, 23, 24.
+- dog-project/dog_app.ipynb: Palermo's original diagnostic and path-configuration
+  additions in cells 2, 5, 7, 13, 18, 22, 23, 26, 28.
+- extras/student-admissiomns-keras/StudentAdmissionsKeras.ipynb:
+  Palermo's diagnostic additions in cells 2, 4, 5, 18.
+
+Only independently authored additions are covered. Inherited assignment text,
+hints, scaffolding, code, comments, examples, and third-party passages within
+these cells are excluded. The upstream sources are identified in
+THIRD_PARTY_NOTICES.md. A changed line does not by itself establish original
+authorship or override rights in underlying material.
+
+The same limited grant covers reproductions of the identified original
+contributions in boston_housing/report.html,
+customer_segments/customer_segments.html,
+finding_donors/finding_donors.html, and
+titanic_survival_exploration/titanic_survival_exploration.html.
+It does not cover the complete HTML reports, their templates, embedded
+third-party assets, or dataset-derived output.
+
+All other content is outside this grant, including Udacity course material,
+all datasets, images, model assets, visuals.py and compiled .pyc files,
+project descriptions, subproject README files, copied tutorial material,
+and third-party libraries or generated output.
+
+IMPORTANT: Udacity machine-learning material has CC BY-NC-ND 4.0 terms.
+This MIT grant covers only Palermo's own rights. It does not authorize
+distribution of adaptations of that material or remove its NonCommercial
+or NoDerivatives restrictions. Distribution permission for combined or adapted
+coursework remains unresolved. See THIRD_PARTY_NOTICES.md.
+
+MIT License
+
+Copyright (c) 2026 Palermo Penano
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

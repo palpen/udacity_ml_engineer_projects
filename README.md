@@ -25,3 +25,13 @@
 [3]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/boston_housing/boston_housing.ipynb
 [4]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/finding_donors/finding_donors.ipynb
 [5]: https://github.com/palpen/udacity_ml_engineer_projects/blob/master/customer_segments/customer_segments.ipynb
+
+## Licensing
+
+[LICENSE](LICENSE) grants MIT terms only for the specifically identified
+original contributions by Palermo Penano. This repository also contains
+Udacity material under CC BY-NC-ND 4.0 and MIT, an OpenCV/Intel-licensed
+component, and data and assets with separate rights. In particular, the
+MIT grant does not authorize distribution of adapted CC BY-NC-ND coursework.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for source notices,
+exact scope, and unresolved permissions. Existing nested licenses are unchanged.
